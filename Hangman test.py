@@ -1,3 +1,21 @@
+import random
+randomWords = ["ducks" , "jumbo" ,"lucky" , "pills" , "flour"]
+secret = random.choice (randomWords)
+letter = ""
+updateWord = []
+#print secret 
+def initialize(): 
+    print "We have a secret word"
+    print "_ _ _ _ _"
+def getLetter():
+    print "Enter a letter"
+    global letter
+    letter = raw_input()     
+def ifWon():
+    if secret == updateWord: 
+        print "you win"
+    else:
+        getLetter()
 val=0
 def test():
     global val
@@ -12,4 +30,11 @@ def test():
     for i in range (0, len(Secret)):
             print(updatedWord[i], end =" ")
     if Secret.find(Letter) ==-1
-        return "Wrong Letter"            
+        return "Wrong Letter"   
+        
+ def main():
+    initialize ()
+    getLetter()
+    ifWon()
+main()
+         
